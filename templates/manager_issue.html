@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zn-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/static/js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <title>Test</title>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header ">
+            <div class="row shadow-lg">
+                <div class="col-12">
+                    <nav class="navbar nav-pills navbar-expand-md navbar-dark bg-warm fixed-top ">
+                        <div class="container ">
+                            <a class="navbar-brand mr-4  text-secondary " href="#">
+                                <svg class="bi bi-filter" width="1em"
+                                    height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                                <text class="ml-2">Epidemics Management</text>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarToggle">
+                                <div class="navbar-nav mr-auto font-weight-light">
+                                    <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#" id="123">News</a>
+                                    <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#"
+                                        ">Situation</a>
+                                    <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#"
+                                        ">Transportation</a>
+                                    <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#"
+                                        ">Population</a>
+                                    <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#"
+                                    ">Supply</a>
+    
+                                </div>
+                                <div class="navbar-nav ">
+                                    <a class="nav-item nav-link text-muted" href="#">
+                                        <svg class="bi bi-people" width="1em"
+                                            height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                                        </svg> Login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="row clearfix">
+            <div class="col-md-2 column">
+                <h3 class="text-info text-center">
+                    同乘自查
+                </h3>
+                <ul class="nav flex-colomn nav-fill nav-pills justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin') }}">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="manager_issue">高危班次发布</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manager_export">用户信息导出</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manager_email">邮件发送</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 column">
+                <div class="page-header">
+                    <h1>
+                        高危班次发布
+                    </h1>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">疫情管控</a></li>
+                        <li class="breadcrumb-item"><a href="#">同乘自查</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">高危班次发布</li>
+                    </ol>
+                </nav>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label for="serialNumber">班次编号</label>
+                        <input type="text" class="form-control" name="number" id="serialNumber" placeholder="班次编号">
+                    </div>
+                    <label for="radio1">班次类型</label>
+                    <div class="form-group" id="radio1">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flightOrTrain" id="flightRadio" value="flight">
+                        <label class="form-check-label" for="flightRadio">飞机</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="flightOrTrain" id="trainRadio" value="train">
+                        <label class="form-check-label" for="trainRadio">火车</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="serialNumber">起始站</label>
+                    <input type="text" class="form-control" name="start" id="startLocation" placeholder="起始站">
+                </div>
+                <div class="form-group">
+                    <label for="serialNumber">终点站</label>
+                    <input type="text" class="form-control" name="end" id="destination" placeholder="终点站">
+                </div>
+                <div class="form-group">
+                    <label for="flightDate">日期</label>
+                    <input type="date" name="time" class="form-control" id="flightDate">
+                </div>
+                <button type="submit" class="btn btn-primary">发布</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
