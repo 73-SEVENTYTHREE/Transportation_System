@@ -1,0 +1,113 @@
+{% extends "framework.html" %}
+{% block content %}
+        <div class="row clearfix">
+            <div class="col-md-2 column">
+                <h3 class="text-primary text-center">
+                    <strong>同乘自查</strong>
+                </h3>
+                <ul class="nav flex-colomn nav-fill nav-pills justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('admin.index') }}">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin.issue') }}">高危班次发布</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin.exportuser') }}">用户信息导出</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin.sendemail') }}">邮件发送</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 column">
+                <div class="page-header">
+                    <h1>
+                        管理员，您好！
+                    </h1>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">疫情管控</a></li>
+                        <li class="breadcrumb-item"><a href="#">同乘自查</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">管理员首页</li>
+                    </ol>
+                </nav>
+                <h4 style="font-weight: bold;color: #009999;">航空航班</h4>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            航班编号
+                        </th>
+                            <th>
+                                始发站
+                            </th>
+                            <th>
+                                终点站
+                            </th>
+                            <th>
+                                日期
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for t1 in transport1 %}
+                            <tr>
+                                <td>
+                                    {{ t1.number }}
+                                </td>
+                                <td>
+                                    {{ t1.start }}
+                                </td>
+                                <td>
+                                    {{ t1.end }}
+                                </td>
+                                <td>
+                                    {{ t1.time }}
+                                </td>
+                             </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <h4 style="font-weight: bold;color: #009999;">列车班次</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                列车编号
+                            </th>
+                            <th>
+                                始发站
+                            </th>
+                            <th>
+                                终点站
+                            </th>
+                            <th>
+                                日期
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for t0 in transport0 %}
+                            <tr>
+                                <td>
+                                    {{ t0.number }}
+                                </td>
+                                <td>
+                                    {{ t0.start }}
+                                </td>
+                                <td>
+                                    {{ t0.end }}
+                                </td>
+                                <td>
+                                    {{ t0.time }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+{% endblock %}

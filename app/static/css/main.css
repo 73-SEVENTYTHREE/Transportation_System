@@ -1,0 +1,79 @@
+body {
+  background: #ffffff;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-warm {
+  background-color: #F5FFFF;
+  font-weight: bold;
+  font-family: "Geo Sans Light";
+}
+
+.site-header .navbar-nav .nav-link {
+  color:whitesmoke;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: black;
+  background-color: #F5FFFF;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+.shadow-sm{
+ box-shadow: 0 0.125rem 0.125rem rgba(194, 82, 82, 0.075) !important;
+}
+.shadow{
+box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+.jumbotron{
+padding: 1rem 1rem 1rem 1rem;
+margin-bottom: 2rem;
+background-color: #ffffff;/*#FFF5EE;*/
+border-radius: 0.3rem;
+}
+
+.bodycss {
+  background-color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+background-color:#F5FFFF;
+}
+
+.btn-fresh{
+color:#ffffff;
+background-color:#009999;
+border-color: #009999;
+}
+
+.btn-fresh:hover{
+color:#ffffff;
+background-color:#336666;
+border-color: #336666;
+}
+
+.text-primary{
+color:#009999!important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #009999;
+}
+
+.nav-link:hover{
+  color: #fff;
+  background-color: #009999;
+}
+
+.nav-link{
+  color: #336666;
+}

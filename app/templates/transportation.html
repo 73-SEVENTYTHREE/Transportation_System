@@ -1,0 +1,130 @@
+{% extends "framework.html" %}
+{% block content %}
+
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+            <h3 class="text-primary text-center">
+                <strong>同乘自查</strong>
+            </h3>
+            <ul class="nav flex-colomn nav-fill nav-pills justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('user.index') }}">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user.msg_input') }}">个人信息填写</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user.turnsearch') }}">模糊搜索</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('user.turnresult') }}">搜索结果</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-10 column">
+            <div class="page-header">
+                <h1>
+                    {% if name !="None" %}
+                        {% if name=='' %}
+                            游客，您好！
+                            {% else %}
+                            {{ name }},您好！
+                        {% endif %}
+                    {% else %}
+                    {% endif %}
+{#                    <a href="{{ url_for('admin.index') }}" style="font-size: medium;">此处前往<strong>管理员</strong>页面</a>#}
+                </h1>
+            </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">疫情管控</a></li>
+                    <li class="breadcrumb-item"><a href="#">同乘自查</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">用户首页</li>
+                </ol>
+            </nav>
+            <div class="clearfix"></div>
+            <h4 style="font-weight: bold;color: #009999;">航空航班</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">航班编号</th>
+                    <th scope="col">始发站</th>
+                    <th scope="col">终点站</th>
+                    <th scope="col">日期</th>
+                    <th scope="col">登记入口</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for t1 in transport1 %}
+                    <tr>
+                        <td>{{ t1.number }}</td>
+                        <td>{{ t1.start }}</td>
+                        <td>{{ t1.end }}</td>
+                        <td>{{ t1.time }}</td>
+                        <td><a href="{{ url_for('user.indexregister',number=t1.number) }}"
+                                class="btn btn-fresh text-center">登记</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <h4 style="font-weight: bold;color: #009999;">列车班次</h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">列车编号</th>
+                    <th scope="col">始发站</th>
+                    <th scope="col">终点站</th>
+                    <th scope="col">日期</th>
+                    <th scope="col">登记入口</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for t0 in transport0 %}
+                    <tr>
+                        <td>{{ t0.number }}</td>
+                        <td>{{ t0.start }}</td>
+                        <td>{{ t0.end }}</td>
+                        <td>{{ t0.time }}</td>
+                        <td><a href="{{ url_for('user.indexregister',number=t0.number) }}"
+                                class="btn btn-fresh text-center">登记</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+                <!--这一些暂时没用惹
+                <div class="col-1">
+                    <div class="card text-center" style="width: 13rem;">
+                        <div class="card-body">
+                            <p class="card-text">如果你是管理员，请从此处登录。</p>
+                            <a href="" class="btn btn-fresh">
+                                <svg class="bi bi-person" width="1em" height="1em" viewBox="0 0 16 16"
+                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                </svg>
+                                管理员登录
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card text-center" style="width: 13rem;">
+                        <div class="card-body">
+                            <p class="card-text">如果你是用户，可以从此处进行模糊搜索。</p>
+                            <a href="search" class="btn btn-fresh">
+                                <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16"
+                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                    <path fill-rule="evenodd"
+                                          d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                </svg>
+                                模糊搜索
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                -->
+        </div>
+    </div>
+
+{% endblock %}
