@@ -1,0 +1,39 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+{% extends "framework1.html" %}
+{% block content %}
+ <div class="col-8">
+    <div class="jumbotron">
+        <img class="img-fluid"
+            src="https://images.unsplash.com/photo-1590698763144-af7fa49b14c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+            alt="">
+    </div>
+</div>
+<div class="col-4 ml-0">
+  <h1>Log in</h1>
+{% for message in get_flashed_messages() %}
+<p style="color: cornflowerblue">{{ message }}</p>
+{% endfor %}
+    <form action="" method="POST" name="login">
+        {{form.hidden_tag()}}
+        <p>
+            E-mail :<br>
+            {{form.email}}<br>
+        </p>
+        <p>
+            Password:<br>
+            {{ form.password }}
+        </p>
+        <p>{{form.remember}} Remember Me?</p>
+        <p><input type="submit" value="Sign In">
+            <small><a href="{{ url_for('login.forget') }}">&nbsp;&nbsp;Forgot Password?</a></small>
+
+        </p>
+ <small class="text-muted">
+            Need An Account? <a  href="{{ url_for('login.register') }}">Sign Up Now</a>
+        </small>
+    </form>
+
+
+</div>
+{% endblock content %}

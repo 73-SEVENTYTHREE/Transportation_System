@@ -1,15 +1,25 @@
 from flask import render_template, url_for,redirect, Blueprint,session,flash,request
 from app import db
-from app.models import USER,Transport
+from app.transportation_models import  USER,Transport
 from sqlalchemy import text
 
 user = Blueprint('user', __name__)
 
+@user.before_request
+def before_admin():
+    if 'identity' in session and session['identity']=='admin':
+        return redirect(url_for('admin.index'))
+    else:
+        pass
+
 @user.route("/", methods=['GET', 'POST'])
 def index():
+    if 'identity' in session:
+        print(session['identity'])
     name = session.get('name')
     if (name is None):
         name = ""
+    print(name)
     transport0 = Transport.query.filter_by(type=0)
     transport1=Transport.query.filter_by(type=1)
     if(session.get('name') is None and 'transport_number' in session):
@@ -22,7 +32,7 @@ def turnsearch():
     if 'identity_number' in session:
         return render_template('search.html')
     else:
-        flash('您还未注册个人信息，无法搜索，请先填写个人信息！','warning')
+        flash('您还未填写个人信息，无法搜索，请先填写个人信息！','warning')
         print('您还未注册个人信息！')
         return render_template('msg_input.html')
 
@@ -50,7 +60,6 @@ def indexregister(number):
 
 @user.route('/register', methods=['GET', 'POST'])
 def msg_input():
-    print(session.get('transport_number'))
     if request.method == 'POST':
         if 'transport_number' in session:
             name = request.form['name']
@@ -59,11 +68,10 @@ def msg_input():
             phone_number = request.form['phone_number']
             email = request.form['email']
             session['identity_number'] = identity_number
-            session['name'] = name
             session['address'] = address
             session['phone_number'] = phone_number
             session['email'] = email
-            q_user = USER.query.filter_by(identity_number=identity_number).first()
+            q_user = USER.query.filter_by(idcard=identity_number).first()
             if (q_user):
                 flash('您已填写信息！','info')
                 print('您已填写信息！')
@@ -89,7 +97,6 @@ def msg_input():
             phone_number = request.form['phone_number']
             email = request.form['email']
             session['identity_number'] = identity_number
-            session['name'] = name
             session['address'] = address
             session['phone_number'] = phone_number
             session['email'] = email

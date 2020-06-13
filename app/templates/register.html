@@ -1,0 +1,37 @@
+{% extends"framework1.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+    <style>
+        p.help-block {
+            color: indianred;
+            font-size: 12px;
+        }
+
+        .btn {
+            background-color:#eeeeee;
+            margin-left: 32%;
+            color: #555555;
+            font-weight: bold;
+            border-radius: 12%;
+        }
+    </style>
+    <div class="col-4 offset-md-3">
+
+        <h1>注册</h1>
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login.a') }}">Sign In</a>
+        </small>
+        {% for message in get_flashed_messages() %}
+<p style="color: cornflowerblue">{{ message }}</p>
+{% endfor %}
+        <hr/>
+        {{ wtf.quick_form(form) }}
+    </div>
+
+    <br>
+
+
+
+
+
+{% endblock content %}

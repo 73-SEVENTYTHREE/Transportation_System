@@ -1,14 +1,11 @@
-from flask import render_template, request, flash, make_response, url_for, redirect,Blueprint
+from flask import render_template, request, flash, make_response, url_for, redirect,Blueprint,session
 from app import db
-from app.models import Transport
+from app.transportation_models import  Transport
 from io import BytesIO
 import xlsxwriter
 from flask_mail import Mail, Message
 from sqlalchemy import text
 from app import mail
-import datetime
-import time
-
 
 def create_flie(users):
     output=BytesIO()
@@ -31,13 +28,17 @@ def create_flie(users):
 
 admin = Blueprint('admin', __name__)
 
-
+@admin.before_request
+def before_admin():
+    if 'identity' in session and session['identity']=='admin':
+        pass
+    else:
+        return '小火汁，你的思想很危险！'
 
 @admin.route('/', methods=['GET','POST'])
 def index():
     transport1 = Transport.query.filter_by(type=1).all()
     transport0 = Transport.query.filter_by(type=0).all()
-
     print(transport1)
     return render_template('manager_index.html', transport0=transport0, transport1=transport1)
 
