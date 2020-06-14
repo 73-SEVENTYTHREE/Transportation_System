@@ -1,0 +1,52 @@
+{% extends "framework.html" %}
+{% block content %}
+<div class = "container-fluid">
+  <div class = "row">
+<div class="col-sm-3 col-md-2" style="
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;">
+<div class="list-group" style = "text-align: center">
+  <a href="{{ url_for('population_admin.index') }}" class="list-group-item">Home</a>
+  <a href="{{ url_for('population_admin.population') }}" class="list-group-item active">Population</a>
+  <a href="{{ url_for('population_admin.information') }}" class="list-group-item">Information</a>
+  <a href="{{ url_for('population_admin.comments') }}" class="list-group-item">Comments</a>
+</div>
+</div>
+
+<div class="col-sm-6  col-md-8 main">
+  <form action="{{ url_for('population_admin.addPopInfo') }}" method="POST">
+    
+    <div class="form-group">
+      <label for="people_inflow">Inflow</label>
+      <input type="text" class="form-control" id="people_inflow" name="people_inflow" placeholder="The number of population inflow" required>
+      <div class="invalid-feedback">
+        <h1>Please provide the inflow.</h1>
+    </div>
+    <div class="form-group ">
+      <label for="people_outflow">Outflow</label>
+      <input type="text" class="form-control" id="people_outflow" name="people_outflow" placeholder="The number of population outflow" required>
+      <div class="invalid-feedback">
+        <h1>Please provide the outflow.</h1>
+      </div>
+    </div>
+    
+  <button type="submit" class="btn btn-outline-info" style="display:block;margin:0 auto">Update</button>
+
+</div>
+  </form>
+  <br>
+
+
+<div class="col-sm-3 col-md-2">
+</div>
+  </div>
+</div>
+
+{% endblock content %}

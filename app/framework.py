@@ -5,13 +5,18 @@ from app.models import Users, Admin
 
 login = Blueprint('login', __name__)
 
-
+@login.before_request
+def before_login():
+    if 'identity' in session:
+        pass
+    else:
+        session['identity']='Unknown'
+        pass
 
 @login.route("/homeAdmin")
 def homeAdmin():
     admin = Admin.query.all()
     return render_template('homeAdmin.html', admin=admin)
-
 
 @login.route("/", methods=['GET', 'POST'])
 def a():
@@ -25,9 +30,8 @@ def a():
             session['identity']='user'
             flash('登录成功!','success')
             # db.session['email'] = form.email.data
-            return redirect(url_for('user.index'))
+            return render_template('a.html',title=user.username+'您好',form=form)
         else:
-            session['identity']='Unknown'
             flash('登录失败！请重新输入账号密码')
     return render_template('a.html', title='Login', form=form)
 
@@ -76,15 +80,26 @@ def forget():
 
 @login.route("/adminLog", methods=['GET', 'POST'])
 def adminLog():
-    session['identity']='Unknown'
     form = AdminLoginForm()
     if form.validate_on_submit():
         admin = Admin.query.filter_by(name=form.name.data, pwd=form.password.data).all()
         if admin:
-            session['identity']='admin'
+            session['identity']= admin[0].system
+            if 'name' in session:
+                session.pop('name')
             flash('登录成功!','success')
+            if admin[0].system==1:
+                return redirect(url_for('news_admin.index'))
+            if admin[0].system==2:
+                return redirect(url_for('patient_admin.index'))
+            if admin[0].system==3:
+                return redirect(url_for('.addAdmin()'))
             if admin[0].system==4:
-                return redirect(url_for('admin.index'))
+                return redirect(url_for('transport_admin.index'))
+            if admin[0].system==5:
+                return redirect(url_for('population_admin.index'))
+            if admin[0].system==6:
+                return redirect(url_for('supply_admin.index'))
         else:
             flash('登录失败！请重新输入账号密码')
     return render_template('adminLog.html', title='Admin-Login', form=form)

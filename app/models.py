@@ -1,33 +1,20 @@
-from flask_login import LoginManager, login_user, UserMixin, logout_user, login_required
+from flask_login import LoginManager, login_user, UserMixin,logout_user, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.forms import LoginForm, RegistrationForm, AdminForm, AdminLoginForm, pswForm
 from app import db
-
-
+import random
+import datetime
+import string
+from flask import json
+import decimal
 class Permission:
     FOLLOW = 0X01
     COMMENT = 0x02
     WRITE_ARTICLES = 0x03
 
-
-'''
-
-class Role(db.Model):
-    @staticmethod
-    def insert_roles():
-        roles = {
-            'User': (Permission.FOLLOW | Permission.COMMENT | Permission.WRITE_ARTICLES, True),
-            'Admin': (0xff, False)
-        }
-        for r in roles:
-            role = Role.query.filter_by(name=r).first()
-            if role is None:
-                role = Role(name=r)
-            role.permissions = roles[r][0]
-            role.default = roles[r][1]
-            db.session.add(role)
-        db.session.commit()
-        '''
+def gen_id():
+    salt = ''.join(random.sample(string.ascii_letters + string.digits, 8))
+    return salt
 
 
 class Users(db.Model):
@@ -118,9 +105,35 @@ def add():
     db.session.commit()
 
 
-'''
-@LoginManager.user_loader
-def load_user(id):
-    return Users.query.get(int(id))
+class Information(db.Model):
+    __tablename__ = 'information'
+    info_ID = db.Column(db.String(50), default=gen_id, primary_key=True)
+    info_province =db.Column(db.String(150))#与用户管理子系统协商
+    info_type = db.Column(db.Integer)
+    info_title=db.Column(db.String(50))
+    info_text=db.Column(db.String(1000))
+    info_time = db.Column(db.DateTime, default=datetime.datetime.now,onupdate=datetime.datetime.now)
 
-'''
+class Comment(db.Model):
+    __tablename__ = 'comment'
+    comment_ID = db.Column(db.String(50), default=gen_id, primary_key=True) #这个是作为主键标记每一条记录的，用户用的是user_ID
+    user_name = db.Column(db.String(50))
+    info_ID = db.Column(db.String(50), db.ForeignKey('information.info_ID'))
+    comment_text=db.Column(db.String(100))
+    comment_time = db.Column(db.DateTime, default=datetime.datetime.now,onupdate=datetime.datetime.now)
+
+class Popflow(db.Model):
+    __tablename__ = 'population_flow'
+    popflow_ID = db.Column(db.String(50), default=gen_id, primary_key=True)
+    people_province = db.Column(db.String(150))#与用户管理子系统协商
+    people_inflow = db.Column(db.Integer)
+    people_outflow = db.Column(db.Integer)
+    people_time = db.Column(db.DateTime, default=datetime.datetime.now,onupdate=datetime.datetime.now)
+
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return float(o)
+        elif isinstance(o, bytes):
+            return str(o, encoding='utf-8')
+        super(DecimalEncoder, self).default(o)

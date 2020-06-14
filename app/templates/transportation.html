@@ -8,16 +8,16 @@
             </h3>
             <ul class="nav flex-colomn nav-fill nav-pills justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ url_for('user.index') }}">首页</a>
+                    <a class="nav-link active" href="{{ url_for('transport_user.index') }}">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('user.msg_input') }}">个人信息填写</a>
+                    <a class="nav-link" href="{{ url_for('transport_user.msg_input') }}">个人信息填写</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('user.turnsearch') }}">模糊搜索</a>
+                    <a class="nav-link" href="{{ url_for('transport_user.turnsearch') }}">模糊搜索</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('user.turnresult') }}">搜索结果</a>
+                    <a class="nav-link" href="{{ url_for('transport_user.turnresult') }}">搜索结果</a>
                 </li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
                         <td>{{ t1.start }}</td>
                         <td>{{ t1.end }}</td>
                         <td>{{ t1.time }}</td>
-                        <td><a href="{{ url_for('user.indexregister',number=t1.number) }}"
+                        <td><a href="{{ url_for('transport_user.indexregister',number=t1.number) }}"
                                 class="btn btn-fresh text-center">登记</a></td>
                     </tr>
                 {% endfor %}
@@ -86,7 +86,7 @@
                         <td>{{ t0.start }}</td>
                         <td>{{ t0.end }}</td>
                         <td>{{ t0.time }}</td>
-                        <td><a href="{{ url_for('user.indexregister',number=t0.number) }}"
+                        <td><a href="{{ url_for('transport_user.indexregister',number=t0.number) }}"
                                 class="btn btn-fresh text-center">登记</a></td>
                     </tr>
                 {% endfor %}

@@ -88,9 +88,6 @@ var isWindow = function isWindow( obj ) {
 		return obj != null && obj === obj.window;
 	};
 
-window.setTimeout(function(){
-    $('[data-dismiss="alert"]').alert('close');
-},2000);
 
 var document = window.document;
 

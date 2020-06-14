@@ -1,0 +1,54 @@
+{% extends "framework.html" %}
+{% block content %}
+<div class = "container-fluid">
+  <div class = "row">
+<div class="col-sm-3 col-md-2" style="
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;">
+<div class="list-group" style = "text-align: center">
+  <a href="{{ url_for('population_admin.index') }}" class="list-group-item active">Home</a>
+  <a href="{{ url_for('population_admin.population') }}" class="list-group-item">Population</a>
+  <a href="{{ url_for('population_admin.information') }}" class="list-group-item">Information</a>
+  <a href="{{ url_for('population_admin.comments') }}" class="list-group-item">Comments</a>
+</div>
+</div>
+
+<div class="col-sm-6  col-md-8 main">
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="{{ url_for('population_admin.information') }}">Information Update</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Check&Delete</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="information_delete.html">IndustryRestart</a>
+      <a class="dropdown-item" href="information_delete.html">Quarantine</a>
+      <a class="dropdown-item" href="information_delete.html">Transportation</a>
+      <a class="dropdown-item" href="information_delete.html">MedicalService</a>
+    </div>
+  </li>
+  </ul>
+  <br>
+  <div class="jumbotron">
+    <h1 class="display-4">{{notice}}</h1>
+    <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-outline-info btn-lg" href="{{URL}}" role="button">Back</a>
+    </p>
+  </div>
+</div>
+  
+
+<div class="col-sm-3 col-md-2">
+</div>
+  </div>
+</div>
+
+{% endblock content %}

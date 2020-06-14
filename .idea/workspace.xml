@@ -1,51 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:a" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fa2c002-5a14-4cc5-b38c-efbbbfd9ad92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/framework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/main1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/addAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/adminLog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/forget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/framework1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/homeAdmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/transportation_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/同乘自查子系统final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/同乘自查子系统final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+    <list default="true" id="fb929718-b7bd-4dd4-88bc-0b52d8f1e24e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/poppulation_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/population_admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/cloud-zoom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/flexslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/fontello-codes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/fontello-embedded.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/fontello-ie7-codes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/fontello-ie7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/fontello.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/ie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/ie9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/responsive-calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/chosen.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts-en.simple.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/echarts.simple.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/bmap(1).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/bmap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/bmap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/dataTool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/dataTool.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/dist/extension/dataTool.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/instafeed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jflickrfeed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery-ui-1.10.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery.flexslider-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery.mixitup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery.placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery.queryloader2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/jquery.raty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map-beijing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/js/china-contour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/js/world.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/china-cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/china-contour.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/china.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/anhui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/aomen.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/beijing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/chongqing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/fujian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/gansu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/guangdong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/guangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/guizhou.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/hainan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/hebei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/heilongjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/henan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/hubei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/hunan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/jiangsu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/jiangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/jilin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/liaoning.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/neimenggu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/ningxia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/qinghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/shandong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/shanghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/shanxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/shanxi1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/sichuan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/taiwan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/tianjin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/xianggang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/xinjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/xizang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/yunnan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/province/zhejiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/map/json/world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/contact-form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/newsletter-form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/162f88009c69dfe439b73801a4f1ae8b.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/781ed235a4d1bc338cf3494e7cf3cbd8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/a21de42ad75f3e973c835b326ed741c3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/fc17e07b6127d49a5ca5618f4393ff75.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/jquery.tweet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/jquery.tweet.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/lib/tmhOAuth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/php/twitter/lib/tmhUtilities.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/responsive-calendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_large_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_large_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_left2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrow_right2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrowleft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrowright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/arrows.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/black50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/boxed_bgtile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/bullet_boxed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/bullets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/bullets.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/bullets2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/coloredbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/grain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/gridtile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/gridtile_3x3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/gridtile_3x3_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/gridtile_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/large_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/large_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/loader2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/navigdots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/navigdots_bgtile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/shadow1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/shadow2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/shadow3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/small_arrows.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/small_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/small_left_boxed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/small_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/small_right_boxed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/timer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/timerdot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/transparent.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/assets/white50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/css/settings-ie8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/css/settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/font/revicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/font/revicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/font/revicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/font/revicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/images/decor_inside.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/images/decor_inside_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/images/decor_testimonial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/images/gradient/g30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/images/gradient/g40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/js/jquery.themepunch.plugins.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/js/jquery.themepunch.revolution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/js/jquery.themepunch.revolution.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/demo.captions.vtt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/font/vjs.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/font/vjs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/font/vjs.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/font/vjs.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video-js.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video-js.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video-js.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video-js.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/revolution-slider/videojs/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/script_ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/zoomsl-3.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/comments_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/details-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/details-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/details-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/details-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/information.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/information_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/notice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/page-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/popu_user_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/population.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/transport_admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/transport_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/同乘自查子系统final.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/framework.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/jQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/jQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/addAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/addAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/adminLog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/adminLog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/forget.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/forget.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/framework.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/framework.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/framework1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/homeAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/homeAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/manager_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manager_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/manager_export.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manager_export.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/manager_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manager_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/manager_issue.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/manager_issue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/msg_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/msg_input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/transportation.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/transportation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/user.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,38 +241,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="6a77e26f7831465957b32bca5473aa1bfb263956" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1dDwEt8qAdVTg0mMZOJtHSyYG3f" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1dJmHD1T2n4Qhk68yeuHLLO3PV2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration name="同乘自查子系统final" type="PythonConfigurationType" factoryName="Python">
-      <module name="同乘自查子系统final" />
+    <configuration name="同乘自查子系统+人口流动子系统" type="PythonConfigurationType" factoryName="Python">
+      <module name="同乘自查子系统+人口流动子系统" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -96,29 +268,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="同乘自查子系统final" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/models.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,7 +278,7 @@
       <method v="2" />
     </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="同乘自查子系统final" />
+      <module name="同乘自查子系统+人口流动子系统" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -152,7 +302,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.views" />
-        <item itemvalue="Python.models" />
       </list>
     </recent_temporary>
   </component>
@@ -161,108 +310,25 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1fa2c002-5a14-4cc5-b38c-efbbbfd9ad92" name="Default Changelist" comment="" />
-      <created>1591972862538</created>
+      <changelist id="fb929718-b7bd-4dd4-88bc-0b52d8f1e24e" name="Default Changelist" comment="" />
+      <created>1592151481629</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591972862538</updated>
-      <workItem from="1591972870800" duration="21841000" />
+      <updated>1592151481629</updated>
+      <workItem from="1592151502230" duration="65000" />
     </task>
-    <task id="LOCAL-00001" summary="all done">
-      <created>1591973435790</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1591973435790</updated>
-    </task>
-    <task id="LOCAL-00002" summary="all done">
-      <created>1591973684365</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1591973684365</updated>
-    </task>
-    <task id="LOCAL-00003" summary="all done">
-      <created>1591973813594</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1591973813594</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="a" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="all done" />
-    <option name="LAST_COMMIT_MESSAGE" value="all done" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="111" key="#views" timestamp="1591972904750">
+    <state x="722" y="122" key="#views" timestamp="1592151571753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="111" key="#views/0.0.1920.1040@0.0.1920.1040" timestamp="1591972904750" />
-    <state x="560" y="105" key="CommitChangelistDialog2" timestamp="1591973812827">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="560" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591973812827" />
-    <state width="1296" height="281" key="GridCell.Tab.0.bottom" timestamp="1592036498652">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1296" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592036498652" />
-    <state width="1296" height="281" key="GridCell.Tab.0.center" timestamp="1592036498652">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1296" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592036498652" />
-    <state width="1296" height="281" key="GridCell.Tab.0.left" timestamp="1592036498652">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1296" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592036498652" />
-    <state width="1296" height="281" key="GridCell.Tab.0.right" timestamp="1592036498652">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1296" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592036498652" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1591973816640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591973816640" />
-    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591972945079">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="754" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591972945079" />
-    <state x="736" y="380" key="git4idea.rebase.GitRebaseDialog" timestamp="1591973015640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="736" y="380" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591973015640" />
+    <state x="722" y="122" key="#views/0.0.1920.1040@0.0.1920.1040" timestamp="1592151571753" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/final$views.coverage" NAME="views Coverage Results" MODIFIED="1592036498641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/final$models.coverage" NAME="models Coverage Results" MODIFIED="1592011568842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/_$views.coverage" NAME="views Coverage Results" MODIFIED="1592151574101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

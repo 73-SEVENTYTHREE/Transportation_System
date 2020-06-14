@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title -->
+	<title>-DEMO-</title>
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+	<link href='http://fonts.useso.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<script src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<link href="{{ url_for('static', filename='css/fontello.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='js/revolution-slider/css/settings.css') }}" rel="stylesheet" type="text/css" media="screen" />
+	<link href="{{ url_for('static', filename='css/owl.carousel.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/responsive-calendar.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/chosen.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ url_for('static', filename='css/cloud-zoom.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		.no-fouc {
+			display: none;
+		}
+	</style>
+	<script src="{{ url_for('static', filename='js/dist/echarts.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/map/js/china.js') }}"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		#main-chart {
+			width: 650px;
+			height: 540px;
+			display: inline-block;
+			border: 1px solid #ddd;
+		}
+	</style>
+	<!-- jQuery -->
+	<script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery-ui-1.10.4.min.js') }}"></script>
+
+	<!-- Preloader -->
+	<script src="{{ url_for('static', filename='js/jquery.queryloader2.min.js') }}"></script>
+
+	<script type="text/javascript">
+		$('html').addClass('no-fouc');
+
+		$(document).ready(function () {
+
+			$('html').show();
+
+			var window_w = $(window).width();
+			var window_h = $(window).height();
+			var window_s = $(window).scrollTop();
+
+			$("body").queryLoader2({
+				backgroundColor: '#f2f4f9',
+				barColor: '#63b2f5',
+				barHeight: 4,
+				percentage: false,
+				deepSearch: true,
+				minimumTime: 1000,
+				onComplete: function () {
+
+					$('.animate-onscroll').filter(function (index) {
+
+						return this.offsetTop < (window_s + window_h);
+
+					}).each(function (index, value) {
+
+						var el = $(this);
+						var el_y = $(this).offset().top;
+
+						if ((window_s) > el_y) {
+							$(el).addClass('animated fadeInDown').removeClass('animate-onscroll');
+							setTimeout(function () {
+								$(el).css('opacity', '1').removeClass('animated fadeInDown');
+							}, 2000);
+						}
+
+					});
+
+				}
+			});
+
+		});
+	</script>
+    {% for message in get_flashed_messages(with_categories=True) %}
+    <div class="alert alert-{{ message[0] }} alert-dismissible" role="alert">
+        {{ message[1] }}
+    </div>
+{% endfor %}
+</head>
+
+<body class="sticky-header-on tablet-sticky-header">
+
+	<div id="fb-root"></div>
+	<script>(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Container -->
+	<div class="container">
+
+
+<header class="site-header ">
+        <div class="row shadow-lg">
+            <div class="col-12">
+                <nav class="navbar nav-pills navbar-expand-md navbar-dark bg-warm fixed-top ">
+                    <div class="container ">
+                        <a class="navbar-brand mr-4  text-secondary " href="{{ url_for('login.a') }}">
+                            <svg class="bi bi-filter" width="1em"
+                                height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
+                            </svg>
+                            <text class="ml-2">Epidemics Management</text>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarToggle">
+                            <div class="navbar-nav mr-auto font-weight-light">
+                                <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#" id="123">News</a>
+                                <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#">Situation</a>
+                                <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="{{ url_for('transport_user.index') }}">Transportation</a>
+                                <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4"
+                                href="{{ url_for('population_user.index') }}">Population</a>
+                                <a class="nav-item nav-link mr-auto text-secondary border-bottom ml-4" href="#">Supply</a>
+
+                            </div>
+                            <div class=" navbar-nav">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><svg class="bi bi-people" width="1em"
+                                        height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
+                                    </svg> Login
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu pull-right" style="left:auto">
+                                    <li><a href="{{ url_for('login.a')}}">个人信息</a></li>
+                                    <li><a href="{{ url_for('login.register')}}">注册</a></li>
+                                    <li><a href="{{ url_for('login.adminLog')}}">管理员登录</a></li>
+                                    <li><a href="{{ url_for('login.forget')}}">修改密码</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+		<!-- /Header -->
+
+		<section id="content">
+			<!-- Section -->
+			<section class="section full-width-bg">
+
+				<div class="row">
+
+					<div class="col-lg-12 col-md-12 col-sm-12">
+
+						<!-- Revolution Slider -->
+
+						<!-- /Revolution Slider -->
+
+					</div>
+
+
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<h3 class="animate-onscroll no-margin-top">选择资讯类型</h3>
+						<div class="banners-inline">
+
+							<div class="banner-wrapper">
+								<a class="banner animate-onscroll" href="{{url_for('population_user.details_1', province='浙江')}}">
+									<i class="icons icon-calendar"></i>
+									<h4>复工复产</h4>
+									<p>点击查看最新消息</p>
+								</a>
+							</div>
+
+							<div class="banner-wrapper">
+								<a class="banner animate-onscroll" href="{{url_for('population_user.details_2', province='浙江')}}">
+									<i class="icons icon-check"></i>
+									<h4>社区管控</h4>
+									<p>点击查看最新消息</p>
+								</a>
+							</div>
+
+							<div class="banner-wrapper">
+								<a class="banner animate-onscroll" href="{{url_for('population_user.details_3', province='浙江')}}">
+									<i class="icons icon-user"></i>
+									<h4>医疗举措</h4>
+									<p>点击查看最新消息</p>
+								</a>
+							</div>
+
+							<div class="banner-wrapper">
+								<a class="banner animate-onscroll" href="{{url_for('population_user.details_4', province='浙江')}}">
+									<i class="icons icon-tag"></i>
+									<h4>交通出行</h4>
+									<p>点击查看最新消息</p>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+			<!-- /Section -->
+			<!-- Section -->
+			<section class="section full-width-bg gray-bg">
+
+				<div class="row">
+
+					<div class="col-lg-12 col-md-12 col-sm-12">
+
+						<h3 class="animate-onscroll no-margin-top">全国人口流动密度图</h3>
+						<div class="row">
+							<div class="col-2">
+							</div>
+							<div class="col-8">
+								<!-- Blog Post -->
+								<div class="blog-post big animate-onscroll">
+
+									<div class="post-image"> </div>
+									<div id="main-chart"></div>
+
+
+								</div>
+								<!-- /Blog Post -->
+							</div>
+							<div class="col-2">
+							</div>
+						</div>
+					</div>
+                </div>
+			</section>
+			<!-- /Section -->
+
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h3 class="animate-onscroll no-margin-top">重点地区情况一览</h3>
+					<div class="blog-post big animate-onscroll">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">省份</th>
+									<th scope="col">总流入</th>
+									<th scope="col">总流出</th>
+								</tr>
+							</thead>
+							<tbody>
+								{%for record in data%}
+								<tr>
+									<th scope="row">{{record.province}}</th>
+									<th scope="row">{{record.inflow}}</th>
+									<th scope="row">{{record.outflow}}</th>
+								</tr>
+								{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div id="lower-footer">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 animate-onscroll"> </div>
+				</div>
+			</div>
+		</footer>
+		<!-- /Footer -->
+		<!-- Back To Top -->
+		<a href="#" id="button-to-top"><i class="icons icon-up-dir"></i></a>
+
+	</div>
+	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- Modernizr -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+
+	<!-- Sliders/Carousels -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+
+	<!-- Revolution Slider  -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/revolution-slider/js/jquery.themepunch.plugins.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/revolution-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
+
+	<!-- Calendar -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/responsive-calendar.min.js') }}"></script>
+
+	<!-- Raty -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.raty.min.js') }}"></script>
+
+	<!-- Chosen -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/chosen.jquery.min.js') }}"></script>
+
+	<!-- jFlickrFeed -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jflickrfeed.min.js') }}"></script>
+
+	<!-- InstaFeed -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/instafeed.min.js') }}"></script>
+
+	<!-- Twitter -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/php/twitter/jquery.tweet.js') }}"></script>
+
+	<!-- MixItUp -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.js') }}"></script>
+
+	<!-- CloudZoom -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/zoomsl-3.0.min.js') }}"></script>
+
+	<!-- Main Script -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+	<script type="text/javascript">
+
+		{#var test = '{{test|tojson }}';#}
+		{#var test1='{{test1|tojson|safe }}';#}
+		var test2={name:"新疆",value:5566};
+		
+
+		// var str1 = '{ "name":"cxh","sex":9999 }';
+		// console.log(str1);
+		// console.log(JSON.parse(str1));
+		// console.log(JSON.parse(str1)["sex"]);
+
+		var js=JSON.parse({{Gdata|tojson}});
+		console.log(js)
+
+
+		var dataChina = js;
+		{#	//{name: '黑龙江', value: test},#}
+		{#	{name: js[0].name,value:js[0].value},#}
+		{#	//{name: '浙江', value: 1000 }, 			    #}
+        {#    {name: js[1].name, value: js[1].value},#}
+		{#	{name: js[2].name, value: js[2].value}, #}
+		{#	{name: js[3].name, value: js[3].value},  #}
+		{#	{name: js[4].name, value: js[4].value},  #}
+		{#	{name: js[5].name, value: js[5].value},  #}
+		{#	{name: js[6].name, value: js[6].value},  #}
+		{#	{name: js[7].name, value: js[7].value},  #}
+		{#	{name: js[8].name, value: js[8].value},  #}
+		{#	{name: js[9].name, value: js[9].value},  #}
+		{#	{name: js[10].name, value: js[10].value},    #}
+		{#	{name: js[11].name, value: js[11].value},#}
+		{#	{name: js[12].name, value: js[12].value}, #}
+		{#	{name: js[13].name, value: js[13].value},  #}
+		{#	{name: js[14].name, value: js[14].value},  #}
+		{#	{name: js[15].name, value: js[15].value},  #}
+		{#	{name: js[16].name, value: js[16].value},  #}
+		{#	{name: js[17].name, value: js[17].value},  #}
+		{#	{name: js[18].name, value: js[18].value},  #}
+		{#	{name: js[19].name, value: js[19].value},  #}
+		{#	{name: js[20].name, value: js[20].value},  #}
+		{#	{name: js[21].name, value: js[21].value},#}
+		{#	{name: js[22].name, value: js[22].value}, #}
+		{#	{name: js[23].name, value: js[23].value},  #}
+		{#	{name: js[24].name, value: js[24].value},  #}
+		{#	{name: js[25].name, value: js[25].value},  #}
+		{#	{name: js[26].name, value: js[26].value},  #}
+		{#	{name: js[27].name, value: js[27].value},  #}
+		{#	{name: js[28].name, value: js[28].value},  #}
+		{#	{name: js[29].name, value: js[29].value},  #}
+		{#	{name: js[30].name, value: js[30].value}, #}
+		{#];#}
+		var chinaChart = echarts.init(document.getElementById('main-chart'));
+
+		option = {
+			tooltip: {
+				formatter: function (params, ticket, callback) {
+					return params.seriesName + '<br />' + params.name + '：' + params.value
+				}//数据格式化
+			},
+			visualMap: {
+				min: 0,
+				max: 1500,
+				left: 'left',
+				top: 'bottom',
+				text: ['高', '低'],//取值范围的文字
+				inRange: {
+					color: ['#e0ffff', '#b22222']//取值范围的颜色
+				},
+				show: true//图注
+			},
+			geo: {
+				map: 'china',
+				roam: false,//不开启缩放和平移
+				zoom: 1.23,//视角缩放比例
+				label: {
+					normal: {
+						show: true,
+						fontSize: '10',
+						color: 'rgba(0,0,0,0.7)'
+					}
+				},
+				itemStyle: {
+					normal: {
+						borderColor: 'rgba(0, 0, 0, 0.2)'
+					},
+					emphasis: {
+						areaColor: '#F3B329',//鼠标选择区域颜色
+						shadowOffsetX: 0,
+						shadowOffsetY: 0,
+						shadowBlur: 20,
+						borderWidth: 0,
+						shadowColor: 'rgba(0, 0, 0, 0.5)'
+					}
+				}
+			},
+			series: [
+				{
+					name: '日增加人数',
+					type: 'map',
+					geoIndex: 0,
+					data: dataChina
+				}
+			]
+		};
+		chinaChart.setOption(option);
+		chinaChart.on('click', function (params) {
+			alert(params.name);
+		});
+
+	</script>
+</body>
+
+</html>
