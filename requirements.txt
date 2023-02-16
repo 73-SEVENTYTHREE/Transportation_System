@@ -4,7 +4,7 @@ Flask==1.1.2
 SQLAlchemy==1.2.14
 WTForms==2.3.1
 Flask_Mail==0.9.1
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 Flask_Login==0.5.0
 XlsxWriter==1.2.7
 flask_bootstrap==3.3.7.1
